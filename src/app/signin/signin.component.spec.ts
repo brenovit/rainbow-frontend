@@ -2,21 +2,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 
-import { LoginComponent } from './login.component';
-import { LoginModule } from './login.module';
+import { SigninComponent } from './signin.component';
+import { SigninModule } from './signin.module';
 
-describe('LoginComponent', () => {
-    let component: LoginComponent;
-    let fixture: ComponentFixture<LoginComponent>;
+describe('SigninComponent', () => {
+    let component: SigninComponent;
+    let fixture: ComponentFixture<SigninComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            imports: [LoginModule, RouterTestingModule, BrowserAnimationsModule]
+            imports: [SigninModule, RouterTestingModule, BrowserAnimationsModule]
         }).compileComponents();
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(LoginComponent);
+        fixture = TestBed.createComponent(SigninComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

@@ -9,10 +9,10 @@ import { Signup } from '../../models/signup';
 })
 export class AuthService extends ApiAccess {
     login(credentials: Signin): Observable<any> {
-        return this.httpCliente.post(this.getUrl('signin'), credentials);
+        return this.httpCliente.post(this.getUrl('auth/signin'), credentials);
     }
 
     register(user: Signup): Observable<any> {
-        return this.httpCliente.post(this.getUrl('signup'), user);
+        return this.httpCliente.post(this.getUrl('auth/signup'), user);
     }
 }

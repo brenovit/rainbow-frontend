@@ -7,7 +7,7 @@ export abstract class ApiAccess {
     private baseUrl = environment.baseUrl;
     constructor(protected httpCliente: HttpClient) {}
 
-    getUrl(endpoint: string) {
+    protected getUrl(endpoint: string) {
         return `${this.baseUrl}/${endpoint}`;
     }
 }

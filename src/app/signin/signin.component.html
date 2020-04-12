@@ -3,10 +3,10 @@
         <div class="col-md-4">
             <img class="user-avatar" src="assets/images/logo.png" width="150px" />
             <h1>TORREBRAS</h1>
-            <div *ngIf="message">
-                <ngb-alert type="danger" (close)="close()">{{ message }}</ngb-alert>
+            <div *ngIf="apiErro">
+                <ngb-alert type="danger" (close)="close()">{{ apiErro.message }}</ngb-alert>
             </div>
-            <form role="form" (ngSubmit)="onLoggedin()">
+            <form role="form" (ngSubmit)="onSubmit()">
                 <div class="form-content">
                     <div class="form-group">
                         <input
@@ -30,7 +30,7 @@
                 </div>
                 <button type="submit" class="btn rounded-btn">{{ 'Log in' | translate }}</button>
                 &nbsp;
-                <a [routerLink]="['/signup']" class="btn rounded-btn">{{ 'Register' | translate }}</a>
+                <a [routerLink]="['/register']" class="btn rounded-btn">{{ 'Register' | translate }}</a>
             </form>
         </div>
     </div>
