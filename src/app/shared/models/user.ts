@@ -1,5 +1,9 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 export class User {
-    email: string;
-    password: string;
+    token: string;
+    type: string;
+    id: number;
+    username: string;
+    name: string;
+    permissions: string[];
 }

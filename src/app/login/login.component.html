@@ -4,7 +4,7 @@
             <img class="user-avatar" src="assets/images/logo.png" width="150px" />
             <h1>TORREBRAS</h1>
             <div *ngIf="message">
-                <p>{{ message }}</p>
+                <ngb-alert type="danger" (close)="close()">{{ message }}</ngb-alert>
             </div>
             <form role="form" (ngSubmit)="onLoggedin()">
                 <div class="form-content">
@@ -14,7 +14,7 @@
                             class="form-control input-underline input-lg"
                             type="text"
                             name="email"
-                            [(ngModel)]="user.email"
+                            [(ngModel)]="user.login"
                         />
                     </div>
 
