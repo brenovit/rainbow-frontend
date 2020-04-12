@@ -2,14 +2,19 @@
     <div class="row justify-content-md-center">
         <div class="col-md-4">
             <img class="user-avatar" src="assets/images/logo.png" width="150px" />
-            <h1>SB Admin BS4 Angular9</h1>
-            <form role="form">
+            <h1>TORREBRAS</h1>
+            <div *ngIf="message">
+                <p>{{ message }}</p>
+            </div>
+            <form role="form" (ngSubmit)="onLoggedin()">
                 <div class="form-content">
                     <div class="form-group">
                         <input
                             [placeholder]="'Email' | translate"
                             class="form-control input-underline input-lg"
                             type="text"
+                            name="email"
+                            [(ngModel)]="user.email"
                         />
                     </div>
 
@@ -18,12 +23,12 @@
                             [placeholder]="'Password' | translate"
                             class="form-control input-underline input-lg"
                             type="password"
+                            name="password"
+                            [(ngModel)]="user.password"
                         />
                     </div>
                 </div>
-                <a (click)="onLoggedin()" [routerLink]="['/dashboard']" class="btn rounded-btn">{{
-                    'Log in' | translate
-                }}</a>
+                <button type="submit" class="btn rounded-btn">{{ 'Log in' | translate }}</button>
                 &nbsp;
                 <a [routerLink]="['/signup']" class="btn rounded-btn">{{ 'Register' | translate }}</a>
             </form>
