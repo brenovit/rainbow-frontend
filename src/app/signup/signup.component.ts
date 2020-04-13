@@ -30,7 +30,6 @@ export class SignupComponent implements OnInit {
 
     onSubmit() {
         this.user.senha = this.password;
-        console.log(this.user);
         this.auth.register(this.user).subscribe(
             (data) => {
                 console.log(data.message);

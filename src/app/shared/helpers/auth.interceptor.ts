@@ -1,4 +1,3 @@
-import { AuthInterceptor } from './auth.interceptor';
 import { TokenStorageService } from './../services/auth/token-storage.service';
 import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Observable } from 'rxjs';

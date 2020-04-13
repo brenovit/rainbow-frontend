@@ -1,6 +1,8 @@
+import { Constants } from './../shared/helpers/constants';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout.component';
+import { RoleGuard } from '../shared/guard/role-guard';
 
 const routes: Routes = [
     {
@@ -26,7 +28,11 @@ const routes: Routes = [
             },
             {
                 path: 'blank-page',
-                loadChildren: () => import('./blank-page/blank-page.module').then((m) => m.BlankPageModule)
+                loadChildren: () => import('./blank-page/blank-page.module').then((m) => m.BlankPageModule),
+                canActivate: [RoleGuard],
+                data: {
+                    expectedRoles: [Constants.ROLES.ADMIN]
+                }
             }
         ]
     }
