@@ -4,7 +4,7 @@
 
 export const environment = {
     production: false,
-    baseUrl: 'http://localhost:8181/torrebras/api'
+    baseUrl: 'http://localhost:8181/rainbow/api'
 };
 
 /*
