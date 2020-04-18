@@ -10,6 +10,7 @@ const routes: Routes = [
         component: LayoutComponent,
         children: [
             { path: '', redirectTo: 'dashboard', pathMatch: 'prefix' },
+            { path: 'users', loadChildren: () => import('./users/users.module').then((c) => c.UsersModule) },
             {
                 path: 'dashboard',
                 loadChildren: () => import('./dashboard/dashboard.module').then((m) => m.DashboardModule)

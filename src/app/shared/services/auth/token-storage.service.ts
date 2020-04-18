@@ -1,4 +1,4 @@
-import { User } from './../../models/user';
+import { LoggedUser } from './../../models/user';
 import { Injectable } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
 
@@ -29,12 +29,12 @@ export class TokenStorageService {
         return sessionStorage.getItem(TOKEN_KEY);
     }
 
-    public saveUser(user: User) {
+    public saveUser(user: LoggedUser) {
         window.sessionStorage.removeItem(USER_KEY);
         window.sessionStorage.setItem(USER_KEY, JSON.stringify(user));
     }
 
-    public getUser(): User {
+    public getUser(): LoggedUser {
         return JSON.parse(sessionStorage.getItem(USER_KEY));
     }
 }

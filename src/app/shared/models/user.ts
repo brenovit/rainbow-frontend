@@ -1,5 +1,5 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-export class User {
+export class LoggedUser {
     token: string;
     username: string;
     name: string;

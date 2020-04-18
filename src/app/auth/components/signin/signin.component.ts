@@ -1,11 +1,11 @@
-import { TokenStorageService } from './../shared/services/auth/token-storage.service';
-import { Signin } from '../shared/models/signin';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { routerTransition } from '../router.animations';
-import { ApiErro } from '../shared/models/api-erro';
-import { AuthService } from '../shared/services/auth/auth.service';
-import { LoggedUser } from '../shared/models/user';
+import { routerTransition } from '../../../router.animations';
+import { Signin } from '../../../shared/models/signin';
+import { ApiErro } from '../../../shared/models/api-erro';
+import { AuthService } from '../../../shared/services/auth/auth.service';
+import { TokenStorageService } from '../../../shared/services/auth/token-storage.service';
+import { LoggedUser } from '../../../shared/models/user';
 
 @Component({
     selector: 'app-signin',

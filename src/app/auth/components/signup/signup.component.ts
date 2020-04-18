@@ -1,10 +1,9 @@
-import { LoggedUser } from './../shared/models/user';
-import { ApiErro } from './../shared/models/api-erro';
-import { Router } from '@angular/router';
-import { AuthService } from './../shared/services/auth/auth.service';
-import { Signup } from './../shared/models/signup';
 import { Component, OnInit } from '@angular/core';
-import { routerTransition } from '../router.animations';
+import { routerTransition } from '../../../router.animations';
+import { AuthService } from '../../../shared/services/auth/auth.service';
+import { Signup } from '../../../shared/models/signup';
+import { ApiErro } from '../../../shared/models/api-erro';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-signup',
@@ -33,7 +32,7 @@ export class SignupComponent implements OnInit {
         this.auth.register(this.user).subscribe(
             (data) => {
                 console.log(data.message);
-                this.router.navigate(['/login']);
+                this.router.navigate(['/auth/login']);
             },
             (err) => {
                 this.apiErro = err.error;
